@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Editor</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"
+    integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q=="
+    crossorigin="anonymous" defer></script>
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo">CODE EDITOR</div>
+
+    <button id="runBtn">Run</button>
+    <div id="btnContainer">
+      <div class="toggle-btn active" id="html">HTML</div>
+      <div class="toggle-btn active" id="css">CSS</div>
+      <div class="toggle-btn active" id="js">JS</div>
+      <div class="toggle-btn" id="output">Output</div>
+    </div>
+    <span class="material-icons theme-toggle">
+      brightness_4
+    </span>
+  </div>
+  <div id="bodyContainer">
+    <div class="panel" id="htmlTA"></div>
+    <div class="panel" id="cssTA"></div>
+    <div class="panel" id="jsTA"></div>
+    <div>
+      <p style="margin: 0px; color: grey" id="output-txt" class="panel">
+        Output
+      </p>
+      <hr />
+      <iframe id="outputDiv" class="panel"></iframe>
+    </div>
+  </div>
+</body>
+
+</html>

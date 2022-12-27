@@ -1,0 +1,90 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg,#fa3c8f,#f27b36);
+}
+
+h1{
+    text-align: center;
+    font-size: 41px;
+    margin: 36px;
+    font-family: Algerian;
+    color: #f8f52a;
+}
+.webLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 175px;
+    background-color: cornflowerblue;
+    margin: 10px;
+    font-size: 26px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.homeContainer{
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.webLink:hover{
+    background-color:#191971;
+    color: white;
+}
+#stopWatchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+#stopWatchBtnContainer{
+    display: inline-block;
+}
+
+#titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stopwatchStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    border: 2px black solid;
+    height: 100px;
+    width:250px;
+}
+.startButton{
+    padding: 5px;
+    margin: 10px;
+    font-size: 30px;
+    width: 150px;
+    background-color: cornflowerblue;
+    border: none;
+
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.startButton:hover{
+    color: white;
+    background-color: #191971;
+}
+.inputContainer{
+    margin-bottom: 50px;
+}
+input{
+    text-align: center;
+    font-size: 20px;
+    width: 150px;
+}
+.allContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

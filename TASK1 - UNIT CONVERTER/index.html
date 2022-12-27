@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<title>Unit Converter</title>
+		<link rel="icon" type="image/png" href="favicon.png">
+	</head>
+	
+	<style>
+		body {
+			background: linear-gradient(90deg,#faeee4,#e7f64a);
+		}
+		h1.mb-5 {
+			text-align: center;
+			font-family: Algerian;
+			color: rgb(249, 42, 42);
+			border: 2px solid rgb(147, 11, 159);
+		}
+	</style>
+
+	<body>
+		<div class="container my-5">
+			<h1 class="mb-5">UNIT CONVERTER</h1>
+			<div class="row">
+				<div class="col-md-4 mb-5">
+					<div class="card">
+						<h5 class="card-header"><i class="fas fa-ruler"></i> Length</h5>
+						<div class="card-body">
+							<div class="row">
+								<p>From:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="length-from-unit">
+										<option value="mm">MM</option>
+										<option value="cm">CM</option>
+										<option value="inch">Inch</option>
+										<option value="foot">Foot</option>
+										<option value="meter">Meter</option>
+										<option value="km">KM</option>
+										<option value="mile">Mile</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" type="number" step="0.01" id="length-from-value">
+								</div>
+							</div>
+							<div class="row">
+								<p>To:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="length-to-unit">
+										<option value="mm">MM</option>
+										<option value="cm">CM</option>
+										<option value="inch">Inch</option>
+										<option value="foot">Foot</option>
+										<option value="meter">Meter</option>
+										<option value="km">KM</option>
+										<option value="mile">Mile</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" id="length-to-value" readonly>
+								</div>
+							</div>
+							<button class="btn btn-primary" onclick="convertLength()"><i class="fas fa-sync"></i> Convert</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-5">
+					<div class="card">
+						<h5 class="card-header"><i class="fas fa-weight-hanging"></i> Weight</h5>
+						<div class="card-body">
+							<div class="row">
+								<p>From:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="weight-from-unit">
+										<option value="grain">Grain</option>
+										<option value="gram">Gram</option>
+										<option value="ounce">Ounce</option>
+										<option value="pound">Pound</option>
+										<option value="kg">KG</option>
+										<option value="stone">Stone</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" type="number" step="0.01" id="weight-from-value">
+								</div>
+							</div>
+							<div class="row">
+								<p>To:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="weight-to-unit">
+										<option value="grain">Grain</option>
+										<option value="gram">Gram</option>
+										<option value="ounce">Ounce</option>
+										<option value="pound">Pound</option>
+										<option value="kg">KG</option>
+										<option value="stone">Stone</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" id="weight-to-value" readonly>
+								</div>
+							</div>
+							<button class="btn btn-primary" onclick="convertWeight()"><i class="fas fa-sync"></i> Convert</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-5">
+					<div class="card">
+						<h5 class="card-header"><i class="fas fa-tachometer-alt"></i> Speed</h5>
+						<div class="card-body">
+							<div class="row">
+								<p>From:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="speed-from-unit">
+										<option value="fts">Ft/S</option>
+										<option value="ms">M/S</option>
+										<option value="kmh">KM/H</option>
+										<option value="mih">Mi/H</option>
+										<option value="knots">Knots</option>
+										<option value="lightspeed">Light Speed</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" type="number" step="0.01" id="speed-from-value">
+								</div>
+							</div>
+							<div class="row">
+								<p>To:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="speed-to-unit">
+										<option value="fts">Ft/S</option>
+										<option value="ms">M/S</option>
+										<option value="kmh">KM/H</option>
+										<option value="mih">Mi/H</option>
+										<option value="knots">Knots</option>
+										<option value="lightspeed">Light Speed</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" id="speed-to-value" readonly>
+								</div>
+							</div>
+							<button class="btn btn-primary" onclick="convertSpeed()"><i class="fas fa-sync"></i> Convert</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-5">
+					<div class="card">
+						<h5 class="card-header"><i class="fas fa-thermometer-half"></i> Temperature</h5>
+						<div class="card-body">
+							<div class="row">
+								<p>From:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="temperature-from-unit">
+										<option value="centigrade">Centigrade</option>
+										<option value="fahrenheit">Fahrenheit</option>
+										<option value="kelvin">Kelvin</option>
+										<option value="rankine">Rankine</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" type="number" step="0.01" id="temperature-from-value">
+								</div>
+							</div>
+							<div class="row">
+								<p>To:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="temperature-to-unit">
+										<option value="centigrade">Centigrade</option>
+										<option value="fahrenheit">Fahrenheit</option>
+										<option value="kelvin">Kelvin</option>
+										<option value="rankine">Rankine</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" id="temperature-to-value" readonly>
+								</div>
+							</div>
+							<button class="btn btn-primary" onclick="convertTemperature()"><i class="fas fa-sync"></i> Convert</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-5">
+					<div class="card">
+						<h5 class="card-header"><i class="fas fa-database"></i> Digital Storage</h5>
+						<div class="card-body">
+							<div class="row">
+								<p>From:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="storage-from-unit">
+										<option value="bit">Bit</option>
+										<option value="byte">Byte</option>
+										<option value="kib">KiB</option>
+										<option value="mib">MiB</option>
+										<option value="gib">GiB</option>
+										<option value="tib">TiB</option>
+										<option value="pib">PiB</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" type="number" step="0.01" id="storage-from-value">
+								</div>
+							</div>
+							<div class="row">
+								<p>To:</p>
+								<div class="col-md-6 mb-3">
+									<select class="form-select" id="storage-to-unit">
+										<option value="bit">Bit</option>
+										<option value="byte">Byte</option>
+										<option value="kib">KiB</option>
+										<option value="mib">MiB</option>
+										<option value="gib">GiB</option>
+										<option value="tib">TiB</option>
+										<option value="pib">PiB</option>
+									</select>
+								</div>
+								<div class="col-md-6 mb-3">
+									<input class="form-control" id="storage-to-value" readonly>
+								</div>
+							</div>
+							<button class="btn btn-primary" onclick="convertStorage()"><i class="fas fa-sync"></i> Convert</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="alert alert-primary mb-5">All conversions are approximate and based on formulas taken from <a href="https://support.google.com/websearch/answer/3284611" target="_blank">Google</a>.</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

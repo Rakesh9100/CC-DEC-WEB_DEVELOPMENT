@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handy Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <audio id="beep" src="./assets/beep.mp3"></audio>
+    <h1>Timer</h1>
+    <div class="homeContainer">
+        <a href="./index.html">
+            <div class="webLink">Home</div>
+        </a>
+        <a href="./Stopwatch.html">
+            <div class="webLink">Stopwatch</div>
+        </a>
+    </div>
+    <!-- HEADER -->
+    <div id="titleContainer">
+        <p id="timer" class="stopwatchStyle">00:00:00</p>
+    </div>
+
+    <div class="allContainer">
+        <div class="inputContainer">
+            <input onchange="changeHour()" type="number" id="h" placeholder="Hours">
+            <input onchange="changeMinute()" type="number" id="m" placeholder="Minutes">
+            <input onchange="changeSecond()" type="number" id="s" placeholder="Seconds">
+        </div>
+        <div id="stopWatchContainer">
+            <button id="startTimer" class="startButton startStopWatchStyle">Start</button>
+            <button class="startButton startStopWatchStyle" onClick="window.location.reload();">Clear</button>
+        </div>
+    </div>
+</body>
+<script src="js/timer.js"></script>
+
+</html>
