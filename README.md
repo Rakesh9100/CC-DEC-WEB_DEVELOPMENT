@@ -1,4 +1,4 @@
-# CC-DEC-WEB_DEVELOPMENT
+# <p align="center">📋CC-DEC-WEB_DEVELOPMENT📋</p>
 
 ***This repository is to share my workings as a Web Developer Intern at [CodeClause](https://internship.codeclause.com/).***
 <br><br>
